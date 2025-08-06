@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt(); 
+        n = Math.abs(n) ; 
+        
+
+        int evensum = 0, oddsum = 0;
+        
+
+        while(n>0){
+            int digit = n%10;
+            if(digit%2==0){
+                evensum += digit;
+              }
+            else{
+                oddsum += digit;
+              }
+            n=n/10;
+        }
+        System.out.println(oddsum +" "+evensum);
+        
+    }
+}
+
+        
